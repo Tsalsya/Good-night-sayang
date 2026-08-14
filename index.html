@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Good Night Sayang 🌙❤️</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- HTML2CANVAS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+    <style>
+
+        :root {
+            --night-dark: #0f172a;
+            --night-blue: #1e293b;
+            --purple: #312e81;
+            --purple-dark: #1e1b4b;
+            --gold: #fef08a;
+            --pink: #fbcfe8;
+            --white: #f8fafc;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            color: var(--white);
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(129,140,248,.25),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(244,114,182,.15),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    var(--night-dark),
+                    var(--purple),
+                    var(--night-blue)
+                );
+        }
+
+
+        /* ===============================
+           STARS
+        =============================== */
+
+        .stars {
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            background-image:
+                radial-gradient(
+                    circle,
+                    white 1px,
+                    transparent 1.5px
+                ),
+                radial-gradient(
+                    circle,
+                    white 1px,
+                    transparent 1.5px
+                ),
+                radial-gradient(
+                    circle,
+                    #fef08a 1px,
+                    transparent 1.5px
+                );
+
+            background-size:
+                80px 80px,
+                120px 120px,
+                180px 180px;
+
+            background-position:
+                10px 20px,
+                40px 70px,
+                80px 30px;
+
+            opacity: .45;
+
+            animation:
+                twinkle 5s
+                infinite ease-in-out;
+
+            z-index: 1;
+        }
+
+
+        .moon {
+
+            position: fixed;
+
+            right: 8%;
+            top: 7%;
+
+            font-size: 5rem;
+
+            opacity: .18;
+
+            filter:
+                drop-shadow(
+                    0 0 20px #fef08a
+                );
+
+            animation:
+                floatMoon 5s
+                ease-in-out
+                infinite;
+
+            z-index: 2;
+        }
+
+
+        /* ===============================
+           SHOOTING STAR
+        =============================== */
+
+        .shooting-star {
+
+            position: fixed;
+
+            width: 90px;
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    white,
+                    transparent
+                );
+
+            transform: rotate(-35deg);
+
+            opacity: 0;
+
+            z-index: 2;
+
+            animation:
+                shooting 6s
+                linear infinite;
+        }
+
+
+        .shooting-star.one {
+
+            top: 20%;
+            left: -100px;
+
+            animation-delay: 1s;
+        }
+
+
+        .shooting-star.two {
+
+            top: 50%;
+            left: -100px;
+
+            animation-delay: 4s;
+        }
+
+
+        /* ===============================
+           CONTAINER
+        =============================== */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 460px;
+
+            padding: 18px;
+
+            z-index: 10;
+        }
+
+
+        .card {
+
+            width: 100%;
+
+            min-height: 500px;
+
+            padding: 30px 24px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-direction: column;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 28px;
+
+            background:
+                rgba(30,41,59,.72);
+
+            border:
+                1px solid
+                rgba(255,255,255,.12);
+
+            backdrop-filter:
+                blur(15px);
+
+            box-shadow:
+                0 25px 60px
+                rgba(0,0,0,.5),
+                inset 0 1px 0
+                rgba(255,255,255,.08);
+        }
+
+
+        /* ===============================
+           TYPOGRAPHY
+        =============================== */
+
+        h1,
+        h2,
+        h3 {
+
+            font-family:
+                'Caveat',
+                cursive;
+
+            color:
+                var(--gold);
+
+            text-shadow:
+                0 2px 15px
+                rgba(254,240,138,.3);
+        }
+
+
+        h1 {
+
+            font-size:
+                2.45rem;
+
+            line-height:
+                1.15;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        h2 {
+
+            font-size:
+                2.3rem;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        h3 {
+
+            font-size:
+                2rem;
+        }
+
+
+        .subtitle {
+
+            font-size:
+                .82rem;
+
+            color:
+                #cbd5e1;
+
+            line-height:
+                1.6;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .hidden {
+
+            display:
+                none !important;
+        }
+
+
+        /* ===============================
+           HEADER ICON
+        =============================== */
+
+        .icon-header {
+
+            font-size:
+                4.5rem;
+
+            margin-bottom:
+                10px;
+
+            filter:
+                drop-shadow(
+                    0 0 10px
+                    var(--gold)
+                );
+
+            animation:
+                float 3s
+                ease-in-out
+                infinite;
+        }
+
+
+        /* ===============================
+           BUTTON
+        =============================== */
+
+        button {
+
+            border:
+                none;
+
+            border-radius:
+                50px;
+
+            padding:
+                11px 26px;
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                .88rem;
+
+            font-weight:
+                600;
+
+            cursor:
+                pointer;
+
+            transition:
+                .25s ease;
+        }
+
+
+        button:hover {
+
+            transform:
+                translateY(-2px)
+                scale(1.03);
+        }
+
+
+        .btn-iya {
+
+            background:
+                var(--gold);
+
+            color:
+                #1e293b;
+
+            box-shadow:
+                0 5px 20px
+                rgba(254,240,138,.2);
+        }
+
+
+        .btn-tidak {
+
+            background:
+                rgba(255,255,255,.12);
+
+            color:
+                white;
+
+            border:
+                1px solid
+                rgba(255,255,255,.15);
+        }
+
+
+        .btn-container {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            height:
+                80px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            margin-top:
+                20px;
+        }
+
+
+        .moving {
+
+            position:
+                absolute;
+
+            transition:
+                all .25s ease;
+        }
+
+
+        /* ===============================
+           NOTIFICATION
+        =============================== */
+
+        .notification {
+
+            position:
+                fixed;
+
+            top:
+                -120px;
+
+            left:
+                50%;
+
+            transform:
+                translateX(-50%);
+
+            width:
+                90%;
+
+            max-width:
+                390px;
+
+            padding:
+                14px 20px;
+
+            text-align:
+                center;
+
+            border-radius:
+                50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #059669,
+                    #10b981
+                );
+
+            color:
+                white;
+
+            font-size:
+                .8rem;
+
+            font-weight:
+                600;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,.3);
+
+            transition:
+                top .5s ease;
+
+            z-index:
+                5000;
+        }
+
+
+        .notification.show {
+
+            top:
+                20px;
+        }
+
+
+        /* ===============================
+           FLOWERS
+        =============================== */
+
+        .hint {
+
+            font-size:
+                .78rem;
+
+            color:
+                #cbd5e1;
+
+            margin-bottom:
+                14px;
+        }
+
+
+        .flower-shop {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            gap:
+                9px;
+
+            margin-bottom:
+                8px;
+        }
+
+
+        .flower-item {
+
+            width:
+                50px;
+
+            height:
+                50px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(255,255,255,.08);
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            font-size:
+                1.8rem;
+
+            cursor:
+                pointer;
+
+            transition:
+                .2s ease;
+        }
+
+
+        .flower-item:hover {
+
+            transform:
+                scale(1.15)
+                rotate(5deg);
+
+            background:
+                rgba(255,255,255,.16);
+        }
+
+
+        .flower-count {
+
+            font-size:
+                .78rem;
+
+            color:
+                #cbd5e1;
+
+            margin-bottom:
+                8px;
+        }
+
+
+        /* ===============================
+           BOUQUET
+        =============================== */
+
+        .bouquet-area {
+
+            width:
+                205px;
+
+            height:
+                175px;
+
+            position:
+                relative;
+
+            margin:
+                8px auto 15px;
+
+            border-radius:
+                50%;
+
+            border:
+                2px dashed
+                rgba(254,240,138,.7);
+
+            background:
+                rgba(255,255,255,.04);
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                inset 0 0 30px
+                rgba(255,255,255,.03);
+        }
+
+
+        .bouquet-wrap {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            bottom:
+                -15px;
+
+            transform:
+                translateX(-50%);
+
+            font-size:
+                4.5rem;
+
+            z-index:
+                1;
+        }
+
+
+        .placed-flower {
+
+            position:
+                absolute;
+
+            font-size:
+                2rem;
+
+            z-index:
+                3;
+
+            animation:
+                flowerAppear .4s
+                ease forwards;
+        }
+
+
+        .btn-next {
+
+            display:
+                none;
+
+            background:
+                var(--pink);
+
+            color:
+                #831843;
+        }
+
+
+        .btn-next.show {
+
+            display:
+                inline-block;
+
+            animation:
+                pulse 1.5s
+                infinite;
+        }
+
+
+        /* ===============================
+           POLAROID
+        =============================== */
+
+        .polaroid-wrapper {
+
+            margin:
+                10px auto;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            flex-direction:
+                column;
+        }
+
+
+        .polaroid {
+
+            background:
+                white;
+
+            padding:
+                12px
+                12px
+                28px;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.5);
+
+            transform:
+                rotate(-2deg);
+
+            width:
+                230px;
+
+            animation:
+                polaroidAppear .7s
+                ease;
+        }
+
+
+        .polaroid-photo {
+
+            width:
+                206px;
+
+            height:
+                180px;
+
+            background:
+                #0f172a;
+
+            overflow:
+                hidden;
+        }
+
+
+        .polaroid-photo img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            display:
+                block;
+        }
+
+
+        .polaroid-caption {
+
+            color:
+                #1e293b;
+
+            font-family:
+                'Caveat',
+                cursive;
+
+            font-size:
+                1.4rem;
+
+            margin-top:
+                8px;
+        }
+
+
+        .photo-actions {
+
+            display:
+                flex;
+
+            gap:
+                10px;
+
+            margin-top:
+                18px;
+
+            flex-wrap:
+                wrap;
+
+            justify-content:
+                center;
+        }
+
+
+        .save-photo {
+
+            background:
+                var(--gold);
+
+            color:
+                #1e293b;
+        }
+
+
+        .continue-letter {
+
+            background:
+                var(--pink);
+
+            color:
+                #831843;
+        }
+
+
+        /* ===============================
+           ENVELOPE
+        =============================== */
+
+        .envelope-wrapper {
+
+            width:
+                160px;
+
+            height:
+                100px;
+
+            margin:
+                25px auto;
+
+            position:
+                relative;
+
+            cursor:
+                pointer;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                flex-end;
+
+            padding-bottom:
+                10px;
+
+            background:
+                #312e81;
+
+            border-radius:
+                0 0 10px 10px;
+
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,.35);
+
+            transition:
+                .3s ease;
+        }
+
+
+        .envelope-wrapper:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.04);
+        }
+
+
+        .envelope-wrapper::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            border-left:
+                80px solid transparent;
+
+            border-right:
+                80px solid transparent;
+
+            border-top:
+                60px solid #1e1b4b;
+
+            z-index:
+                3;
+        }
+
+
+        .envelope-wrapper::after {
+
+            content:
+                "❤️";
+
+            position:
+                absolute;
+
+            top:
+                40px;
+
+            left:
+                50%;
+
+            transform:
+                translateX(-50%);
+
+            z-index:
+                5;
+        }
+
+
+        .envelope-text {
+
+            color:
+                var(--gold);
+
+            font-size:
+                .72rem;
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                1px;
+
+            z-index:
+                6;
+        }
+
+
+        /* ===============================
+           POPUP LETTER
+        =============================== */
+
+        .popup-overlay {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            background:
+                rgba(0,0,0,.8);
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            padding:
+                18px;
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transition:
+                opacity .3s ease;
+
+            z-index:
+                4000;
+        }
+
+
+        .popup-overlay.show {
+
+            opacity:
+                1;
+
+            pointer-events:
+                auto;
+        }
+
+
+        .letter-box {
+
+            width:
+                100%;
+
+            max-width:
+                390px;
+
+            max-height:
+                90vh;
+
+            overflow-y:
+                auto;
+
+            padding:
+                24px;
+
+            background:
+                #fffbeb;
+
+            color:
+                #1e293b;
+
+            border-radius:
+                18px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,.5);
+
+            font-family:
+                'Caveat',
+                cursive;
+
+            font-size:
+                1.4rem;
+
+            line-height:
+                1.5;
+
+            animation:
+                letterOpen .5s ease;
+        }
+
+
+        .letter-title {
+
+            text-align:
+                center;
+
+            margin-bottom:
+                14px;
+        }
+
+
+        .letter-content {
+
+            text-align:
+                left;
+        }
+
+
+        .letter-buttons {
+
+            display:
+                flex;
+
+            gap:
+                10px;
+
+            margin-top:
+                20px;
+        }
+
+
+        /* ===============================
+           WHATSAPP BUTTON
+        =============================== */
+
+        .send-message {
+
+            flex:
+                1;
+
+            background:
+                #fbcfe8;
+
+            color:
+                #831843;
+
+            text-decoration:
+                none;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            text-align:
+                center;
+
+            border-radius:
+                50px;
+
+            padding:
+                11px 15px;
+
+            font-family:
+                'Poppins',
+                sans-serif;
+
+            font-size:
+                .82rem;
+
+            font-weight:
+                600;
+
+            cursor:
+                pointer;
+
+            transition:
+                .25s ease;
+        }
+
+
+        .send-message:hover {
+
+            transform:
+                translateY(-2px)
+                scale(1.03);
+
+            box-shadow:
+                0 8px 20px
+                rgba(251,207,232,.35);
+        }
+
+
+        .close-letter {
+
+            flex:
+                1;
+
+            background:
+                #e2e8f0;
+
+            color:
+                #334155;
+        }
+
+
+        /* ===============================
+           FINAL
+        =============================== */
+
+        .final-heart {
+
+            font-size:
+                5rem;
+
+            animation:
+                heartbeat 1.3s
+                infinite;
+        }
+
+
+        .final-message {
+
+            font-family:
+                'Caveat',
+                cursive;
+
+            color:
+                var(--pink);
+
+            font-size:
+                1.7rem;
+
+            line-height:
+                1.4;
+
+            margin:
+                12px 0 25px;
+        }
+
+
+        .goodnight-button {
+
+            background:
+                var(--gold);
+
+            color:
+                #1e293b;
+
+            padding:
+                12px 30px;
+
+            box-shadow:
+                0 0 20px
+                rgba(254,240,138,.2);
+        }
+
+
+        /* ===============================
+           HEARTS
+        =============================== */
+
+        .floating-heart {
+
+            position:
+                fixed;
+
+            bottom:
+                -30px;
+
+            font-size:
+                1.5rem;
+
+            pointer-events:
+                none;
+
+            z-index:
+                100;
+
+            animation:
+                heartFloat 4s
+                linear forwards;
+        }
+
+
+        /* ===============================
+           CAMERA FLASH
+        =============================== */
+
+        .camera-flash {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            background:
+                white;
+
+            z-index:
+                6000;
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+        }
+
+
+        .camera-flash.flash {
+
+            animation:
+                flash .7s ease;
+        }
+
+
+        /* ===============================
+           ANIMATIONS
+        =============================== */
+
+        @keyframes twinkle {
+
+            0%,100% {
+                opacity:
+                    .25;
+            }
+
+            50% {
+                opacity:
+                    .65;
+            }
+        }
+
+
+        @keyframes float {
+
+            0%,100% {
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-10px);
+            }
+        }
+
+
+        @keyframes floatMoon {
+
+            0%,100% {
+                transform:
+                    translateY(0)
+                    rotate(-5deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-15px)
+                    rotate(5deg);
+            }
+        }
+
+
+        @keyframes shooting {
+
+            0% {
+
+                transform:
+                    translate(-100px,-100px)
+                    rotate(-35deg);
+
+                opacity:
+                    0;
+            }
+
+            10% {
+                opacity:
+                    .8;
+            }
+
+            30% {
+
+                transform:
+                    translate(500px,300px)
+                    rotate(-35deg);
+
+                opacity:
+                    0;
+            }
+
+            100% {
+                opacity:
+                    0;
+            }
+        }
+
+
+        @keyframes flowerAppear {
+
+            0% {
+
+                transform:
+                    scale(0)
+                    rotate(-30deg);
+
+                opacity:
+                    0;
+            }
+
+            70% {
+
+                transform:
+                    scale(1.2)
+                    rotate(10deg);
+            }
+
+            100% {
+
+                transform:
+                    scale(1)
+                    rotate(0);
+
+                opacity:
+                    1;
+            }
+        }
+
+
+        @keyframes pulse {
+
+            0%,100% {
+
+                box-shadow:
+                    0 0 0
+                    rgba(251,207,232,0);
+            }
+
+            50% {
+
+                box-shadow:
+                    0 0 25px
+                    rgba(251,207,232,.5);
+            }
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,100% {
+                transform:
+                    scale(1);
+            }
+
+            15% {
+                transform:
+                    scale(1.15);
+            }
+
+            30% {
+                transform:
+                    scale(1);
+            }
+
+            45% {
+                transform:
+                    scale(1.1);
+            }
+        }
+
+
+        @keyframes letterOpen {
+
+            from {
+
+                transform:
+                    scale(.8)
+                    translateY(20px);
+
+                opacity:
+                    0;
+            }
+
+            to {
+
+                transform:
+                    scale(1)
+                    translateY(0);
+
+                opacity:
+                    1;
+            }
+        }
+
+
+        @keyframes polaroidAppear {
+
+            from {
+
+                transform:
+                    scale(.3)
+                    rotate(-15deg);
+
+                opacity:
+                    0;
+            }
+
+            to {
+
+                transform:
+                    scale(1)
+                    rotate(-2deg);
+
+                opacity:
+                    1;
+            }
+        }
+
+
+        @keyframes heartFloat {
+
+            0% {
+
+                bottom:
+                    -30px;
+
+                opacity:
+                    0;
+
+                transform:
+                    translateX(0)
+                    scale(.7);
+            }
+
+            15% {
+                opacity:
+                    1;
+            }
+
+            100% {
+
+                bottom:
+                    110%;
+
+                opacity:
+                    0;
+
+                transform:
+                    translateX(80px)
+                    rotate(20deg)
+                    scale(1.3);
+            }
+        }
+
+
+        @keyframes flash {
+
+            0% {
+                opacity:
+                    0;
+            }
+
+            20% {
+                opacity:
+                    .95;
+            }
+
+            100% {
+                opacity:
+                    0;
+            }
+        }
+
+
+        /* ===============================
+           MOBILE
+        =============================== */
+
+        @media(max-width:480px) {
+
+            .container {
+                padding:
+                    10px;
+            }
+
+            .card {
+
+                min-height:
+                    500px;
+
+                padding:
+                    25px 17px;
+            }
+
+            h1 {
+                font-size:
+                    2.1rem;
+            }
+
+            h2 {
+                font-size:
+                    2rem;
+            }
+
+            .icon-header {
+                font-size:
+                    3.8rem;
+            }
+
+            .moon {
+                font-size:
+                    3.5rem;
+            }
+
+            .flower-item {
+
+                width:
+                    46px;
+
+                height:
+                    46px;
+
+                font-size:
+                    1.6rem;
+            }
+
+            .bouquet-area {
+
+                width:
+                    190px;
+
+                height:
+                    160px;
+            }
+
+            .polaroid {
+
+                width:
+                    220px;
+            }
+
+            .polaroid-photo {
+
+                width:
+                    196px;
+
+                height:
+                    170px;
+            }
+
+            .letter-buttons {
+
+                flex-direction:
+                    column;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="stars"></div>
+
+    <div class="moon">
+        🌙
+    </div>
+
+    <div class="shooting-star one"></div>
+    <div class="shooting-star two"></div>
+
+
+    <!-- CAMERA FLASH -->
+
+    <div
+        id="camera-flash"
+        class="camera-flash">
+    </div>
+
+
+    <!-- NOTIFICATION -->
+
+    <div
+        id="notification"
+        class="notification">
+
+        Yeayyy ❤️
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+        <div class="card">
+
+
+            <!-- =================================
+                 STEP 1
+            ================================== -->
+
+            <div id="step-1">
+
+                <div class="icon-header">
+                    🌙
+                </div>
+
+                <p class="subtitle">
+                    Sebelum tidur, aku mau tanya sesuatu...
+                </p>
+
+                <h1>
+                    Apakah kamu sayang aku selamanya? 🥺❤️
+                </h1>
+
+                <p class="subtitle">
+                    Jawab yang jujur yaaa...
+                </p>
+
+                <div
+                    class="btn-container"
+                    id="btn-container">
+
+                    <button
+                        class="btn-iya"
+                        onclick="accLove()">
+
+                        Iya ❤️
+
+                    </button>
+
+                    <button
+                        class="btn-tidak"
+                        id="btn-tidak"
+                        onclick="moveButton()">
+
+                        Tidak 😌
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 STEP 2
+            ================================== -->
+
+            <div
+                id="step-2"
+                class="hidden">
+
+                <div class="icon-header">
+                    💐
+                </div>
+
+                <h2>
+                    Rangkai Buket Malam 🌌
+                </h2>
+
+                <p class="hint">
+                    Pilih 5 bunga untuk membuat buketmu.
+                </p>
+
+
+                <div class="flower-shop">
+
+                    <span
+                        class="flower-item"
+                        onclick="addFlower('🌹')">
+                        🌹
+                    </span>
+
+                    <span
+                        class="flower-item"
+                        onclick="addFlower('🌸')">
+                        🌸
+                    </span>
+
+                    <span
+                        class="flower-item"
+                        onclick="addFlower('🌷')">
+                        🌷
+                    </span>
+
+                    <span
+                        class="flower-item"
+                        onclick="addFlower('🌻')">
+                        🌻
+                    </span>
+
+                    <span
+                        class="flower-item"
+                        onclick="addFlower('⭐')">
+                        ⭐
+                    </span>
+
+                </div>
+
+
+                <p class="flower-count">
+
+                    Bunga terkumpul:
+
+                    <strong id="flower-count">
+                        0
+                    </strong>
+
+                    / 5
+
+                </p>
+
+
+                <!-- BOUQUET -->
+
+                <div
+                    class="bouquet-area"
+                    id="bouquet-area">
+
+                    <div class="bouquet-wrap">
+                        💐
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn-next"
+                    id="photo-button"
+                    onclick="takePhoto()">
+
+                    📸 Foto Buket
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 STEP PHOTO
+            ================================== -->
+
+            <div
+                id="step-photo"
+                class="hidden">
+
+                <div class="icon-header">
+                    📸
+                </div>
+
+                <h2>
+                    Kenangan Malam Ini ✨
+                </h2>
+
+                <p class="hint">
+                    Buketmu sudah diabadikan 💐
+                </p>
+
+
+                <div class="polaroid-wrapper">
+
+                    <div
+                        class="polaroid"
+                        id="polaroid">
+
+                        <div
+                            class="polaroid-photo">
+
+                            <img
+                                id="bouquet-photo"
+                                alt="Buket malam">
+
+                        </div>
+
+                        <div class="polaroid-caption">
+
+                            Our little bouquet 💐❤️
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="photo-actions">
+
+                    <button
+                        class="save-photo"
+                        onclick="savePhoto()">
+
+                        💾 Simpan Foto
+
+                    </button>
+
+
+                    <button
+                        class="continue-letter"
+                        onclick="goToLetter()">
+
+                        Lanjut 💌
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 STEP 3
+                 ENVELOPE
+            ================================== -->
+
+            <div
+                id="step-3"
+                class="hidden">
+
+                <div class="icon-header">
+                    💌
+                </div>
+
+                <h2>
+                    Ada Surat Untukmu...
+                </h2>
+
+                <p class="subtitle">
+                    Aku tulis khusus buat kamu.
+                </p>
+
+
+                <div
+                    class="envelope-wrapper"
+                    onclick="openLetter()">
+
+                    <span class="envelope-text">
+
+                        UNTUK SAYANG ❤️
+
+                    </span>
+
+                </div>
+
+
+                <p class="hint">
+
+                    Klik amplopnya 💌
+
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 FINAL
+            ================================== -->
+
+            <div
+                id="step-4"
+                class="hidden">
+
+                <div class="final-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    Good Night, Sayang 🌙
+                </h2>
+
+                <p class="final-message">
+
+                    Terima kasih sudah membaca
+                    pesan kecil ini.
+
+                    <br><br>
+
+                    Semoga malam ini kamu tidur
+                    dengan tenang,
+                    mimpi yang indah,
+                    dan bangun dengan senyum. 🥺❤️
+
+                    <br><br>
+
+                    Jangan lupa...
+                    aku sayang kamu. 🌙
+
+                </p>
+
+
+                <button
+                    class="goodnight-button"
+                    onclick="finishNight()">
+
+                    Good Night 🌙
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         LETTER POPUP
+    ================================== -->
+
+    <div
+        class="popup-overlay"
+        id="letter-popup">
+
+        <div class="letter-box">
+
+            <h3 class="letter-title">
+
+                Untuk Kamu ❤️
+
+            </h3>
+
+
+            <div class="letter-content">
+
+                <p>
+                    Hai sayanggg... 🌙
+                </p>
+
+                <br>
+
+                <p>
+                    Sebelum kamu tidur,
+                    aku cuma mau bilang kalau
+                    aku bersyukur banget bisa
+                    mengenal kamu. 🥺❤️
+                </p>
+
+                <br>
+
+                <p>
+                    Mungkin aku bukan orang
+                    yang selalu sempurna.
+                    Kadang aku suka marah,
+                    suka ngambek,
+                    atau bikin kamu kesel.
+                    😭
+                </p>
+
+                <br>
+
+                <p>
+                    Tapi satu hal yang aku harap
+                    kamu tahu...
+                    aku sayang kamu. ❤️
+                </p>
+
+                <br>
+
+                <p>
+                    Jadi malam ini jangan lupa
+                    istirahat.
+                    Jangan terlalu banyak mikir.
+                    Pejamkan mata,
+                    tarik napas,
+                    dan tidur yang nyenyak ya.
+                    🌙✨
+                </p>
+
+                <br>
+
+                <p>
+                    Good night, sayang.
+                    Semoga besok menjadi hari
+                    yang lebih baik untuk kita.
+                    ❤️
+                </p>
+
+            </div>
+
+
+            <!-- ===============================
+                 WHATSAPP
+            =============================== -->
+
+            <div class="letter-buttons">
+
+                <a
+                    class="send-message"
+                    href="https://wa.me/6283168604383"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    💌 Balas aku di WhatsApp
+
+                </a>
+
+
+                <button
+                    class="close-letter"
+                    onclick="closeLetter()">
+
+                    Tutup
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script>
+
+
+        /* =================================
+           VARIABLES
+        ================================= */
+
+        let flowerCount = 0;
+
+        const maxFlowers = 5;
+
+
+        const flowerPositions = [
+
+            {
+                left: "25%",
+                top: "18%"
+            },
+
+            {
+                left: "45%",
+                top: "10%"
+            },
+
+            {
+                left: "65%",
+                top: "20%"
+            },
+
+            {
+                left: "35%",
+                top: "38%"
+            },
+
+            {
+                left: "57%",
+                top: "40%"
+            }
+
+        ];
+
+
+        /* =================================
+           STEP 1
+        ================================= */
+
+        function accLove() {
+
+            showNotification(
+                "Yeayyy! Aku tahu kamu sayang aku 🥺❤️"
+            );
+
+            createHearts();
+
+
+            setTimeout(() => {
+
+                document
+                    .getElementById("step-1")
+                    .classList.add("hidden");
+
+
+                document
+                    .getElementById("step-2")
+                    .classList.remove("hidden");
+
+            }, 1500);
+
+        }
+
+
+        /* =================================
+           BUTTON TIDAK KABUR
+        ================================= */
+
+        function moveButton() {
+
+            const button =
+                document.getElementById(
+                    "btn-tidak"
+                );
+
+
+            const container =
+                document.getElementById(
+                    "btn-container"
+                );
+
+
+            const containerWidth =
+                container.offsetWidth;
+
+
+            const containerHeight =
+                container.offsetHeight;
+
+
+            const buttonWidth =
+                button.offsetWidth;
+
+
+            const buttonHeight =
+                button.offsetHeight;
+
+
+            const x =
+                Math.random() *
+                Math.max(
+                    0,
+                    containerWidth -
+                    buttonWidth
+                );
+
+
+            const y =
+                Math.random() *
+                Math.max(
+                    0,
+                    containerHeight -
+                    buttonHeight
+                );
+
+
+            button.classList.add(
+                "moving"
+            );
+
+
+            button.style.left =
+                x + "px";
+
+
+            button.style.top =
+                y + "px";
+
+
+            showNotification(
+                "Hehehe tombolnya kabur 😭😂"
+            );
+
+        }
+
+
+        /* =================================
+           ADD FLOWER
+        ================================== */
+
+        function addFlower(flower) {
+
+            if (
+                flowerCount >=
+                maxFlowers
+            ) {
+
+                showNotification(
+                    "Buketnya sudah penuh 💐❤️"
+                );
+
+                return;
+            }
+
+
+            flowerCount++;
+
+
+            document
+                .getElementById(
+                    "flower-count"
+                )
+                .textContent =
+                flowerCount;
+
+
+            const bouquet =
+                document.getElementById(
+                    "bouquet-area"
+                );
+
+
+            const flowerElement =
+                document.createElement(
+                    "span"
+                );
+
+
+            flowerElement.className =
+                "placed-flower";
+
+
+            flowerElement.textContent =
+                flower;
+
+
+            const position =
+                flowerPositions[
+                    flowerCount - 1
+                ];
+
+
+            flowerElement.style.left =
+                position.left;
+
+
+            flowerElement.style.top =
+                position.top;
+
+
+            bouquet.appendChild(
+                flowerElement
+            );
+
+
+            createHearts();
+
+
+            if (
+                flowerCount ===
+                maxFlowers
+            ) {
+
+                document
+                    .getElementById(
+                        "photo-button"
+                    )
+                    .classList.add(
+                        "show"
+                    );
+
+
+                showNotification(
+                    "Buketnya cantik banget! 📸💐"
+                );
+
+            }
+
+        }
+
+
+        /* =================================
+           TAKE PHOTO
+        ================================== */
+
+        function takePhoto() {
+
+            const bouquet =
+                document.getElementById(
+                    "bouquet-area"
+                );
+
+
+            const flash =
+                document.getElementById(
+                    "camera-flash"
+                );
+
+
+            flash.classList.add(
+                "flash"
+            );
+
+
+            createHearts();
+
+
+            setTimeout(() => {
+
+                html2canvas(
+                    bouquet,
+                    {
+                        backgroundColor:
+                            "#172554",
+
+                        scale:
+                            2,
+
+                        useCORS:
+                            true
+                    }
+                )
+                .then(canvas => {
+
+
+                    const image =
+                        canvas.toDataURL(
+                            "image/png"
+                        );
+
+
+                    document
+                        .getElementById(
+                            "bouquet-photo"
+                        )
+                        .src =
+                        image;
+
+
+                    document
+                        .getElementById(
+                            "step-2"
+                        )
+                        .classList.add(
+                            "hidden"
+                        );
+
+
+                    document
+                        .getElementById(
+                            "step-photo"
+                        )
+                        .classList.remove(
+                            "hidden"
+                        );
+
+
+                    showNotification(
+                        "📸 Cekrek! Buket berhasil difoto ❤️"
+                    );
+
+                })
+                .catch(error => {
+
+                    console.error(
+                        error
+                    );
+
+
+                    showNotification(
+                        "Foto gagal dibuat. Coba lagi ya 🥺"
+                    );
+
+                });
+
+            }, 250);
+
+
+            setTimeout(() => {
+
+                flash.classList.remove(
+                    "flash"
+                );
+
+            }, 800);
+
+        }
+
+
+        /* =================================
+           SAVE PHOTO
+        ================================== */
+
+        function savePhoto() {
+
+            const image =
+                document
+                    .getElementById(
+                        "bouquet-photo"
+                    )
+                    .src;
+
+
+            if (
+                !image
+            ) {
+
+                showNotification(
+                    "Foto belum tersedia 🥺"
+                );
+
+                return;
+            }
+
+
+            const link =
+                document.createElement(
+                    "a"
+                );
+
+
+            link.href =
+                image;
+
+
+            link.download =
+                "buket-malam-sayang.png";
+
+
+            document.body.appendChild(
+                link
+            );
+
+
+            link.click();
+
+
+            link.remove();
+
+
+            showNotification(
+                "Foto buket disimpan 📸❤️"
+            );
+
+        }
+
+
+        /* =================================
+           KE SURAT
+        ================================== */
+
+        function goToLetter() {
+
+            document
+                .getElementById(
+                    "step-photo"
+                )
+                .classList.add(
+                    "hidden"
+                );
+
+
+            document
+                .getElementById(
+                    "step-3"
+                )
+                .classList.remove(
+                    "hidden"
+                );
+
+
+            createHearts();
+
+        }
+
+
+        /* =================================
+           OPEN LETTER
+        ================================== */
+
+        function openLetter() {
+
+            document
+                .getElementById(
+                    "letter-popup"
+                )
+                .classList.add(
+                    "show"
+                );
+
+        }
+
+
+        /* =================================
+           CLOSE LETTER
+        ================================== */
+
+        function closeLetter() {
+
+            document
+                .getElementById(
+                    "letter-popup"
+                )
+                .classList.remove(
+                    "show"
+                );
+
+        }
+
+
+        /* =================================
+           WHATSAPP
+        ================================= */
+
+        /*
+         * TIDAK PERLU JAVASCRIPT
+         * UNTUK WHATSAPP.
+         *
+         * Tombol WhatsApp menggunakan
+         * link langsung:
+         *
+         * https://wa.me/6283168604383
+         *
+         */
+
+
+        /* =================================
+           NOTIFICATION
+        ================================= */
+
+        function showNotification(
+            message
+        ) {
+
+            const notification =
+                document.getElementById(
+                    "notification"
+                );
+
+
+            notification.textContent =
+                message;
+
+
+            notification.classList.add(
+                "show"
+            );
+
+
+            clearTimeout(
+                notification.timer
+            );
+
+
+            notification.timer =
+                setTimeout(() => {
+
+                    notification
+                        .classList
+                        .remove(
+                            "show"
+                        );
+
+                }, 2200);
+
+        }
+
+
+        /* =================================
+           FLOATING HEARTS
+        ================================= */
+
+        function createHearts() {
+
+            const heartTypes = [
+                "❤️",
+                "💕",
+                "💗",
+                "💖",
+                "✨"
+            ];
+
+
+            for (
+                let i = 0;
+                i < 6;
+                i++
+            ) {
+
+                setTimeout(() => {
+
+                    const heart =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    heart.className =
+                        "floating-heart";
+
+
+                    heart.textContent =
+                        heartTypes[
+                            Math.floor(
+                                Math.random() *
+                                heartTypes.length
+                            )
+                        ];
+
+
+                    heart.style.left =
+                        Math.random() *
+                        100 +
+                        "vw";
+
+
+                    heart.style.animationDuration =
+                        3 +
+                        Math.random() *
+                        2 +
+                        "s";
+
+
+                    document.body.appendChild(
+                        heart
+                    );
+
+
+                    setTimeout(() => {
+
+                        heart.remove();
+
+                    }, 5000);
+
+
+                }, i * 120);
+
+            }
+
+        }
+
+
+        /* =================================
+           GOOD NIGHT
+        ================================== */
+
+        function finishNight() {
+
+            createHearts();
+
+
+            showNotification(
+                "Good night, sayang 🌙❤️"
+            );
+
+
+            setTimeout(() => {
+
+                window.close();
+
+
+                setTimeout(() => {
+
+                    showNotification(
+                        "Malamnya selesai 🌙❤️ Kamu boleh menutup halaman ini."
+                    );
+
+                }, 500);
+
+            }, 1500);
+
+        }
+
+
+        /* =================================
+           KLIK DI LUAR SURAT
+        ================================== */
+
+        document
+            .getElementById(
+                "letter-popup"
+            )
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    if (
+                        event.target ===
+                        this
+                    ) {
+
+                        closeLetter();
+
+                    }
+
+                }
+            );
+
+
+        /* =================================
+           ESC
+        ================================== */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+                    closeLetter();
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+</body>
+
+</html>
